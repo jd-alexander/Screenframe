@@ -1,6 +1,6 @@
 package lib.screenframe.models
 
-enum class ScreenshotSource {
+enum class Strategy {
     Falcon,
     UIAutomator,
     Default
