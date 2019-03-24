@@ -1,23 +1,26 @@
 package lib.screenframe
 
 import android.app.Activity
-import lib.screenframe.models.ScreenshotSource
+import android.graphics.Bitmap
+import lib.screenframe.models.Strategy
 import tools.fastlane.screengrab.*
 
-class ScreenframeStrategy(private val screenshotSource: ScreenshotSource = ScreenshotSource.Default, private val activity: Activity) : ScreenshotStrategy {
+class ScreenframeStrategy(private val strategy: Strategy = Strategy.Default, private val activity: Activity) : ScreenshotStrategy {
     override fun takeScreenshot(screenshotName: String?, screenshotCallback: ScreenshotCallback?) {
 
+        takeStrategyScreenshot(screenshotName,strategy, ScreenshotCallback { screenshot, bitmap ->
+        })
     }
 
-    private fun takeScreenshot(screenshotName: String, screenshotSource: ScreenshotSource, screenshotCallback: ScreenshotCallback) {
-        return when (screenshotSource) {
-            ScreenshotSource.Falcon -> FalconScreenshotStrategy(activity).takeScreenshot(screenshotName) { screenshot, bitmap ->
+    private fun takeStrategyScreenshot(screenshotName: String?, strategy: Strategy, screenshotCallback: ScreenshotCallback) {
+        return when (strategy) {
+            Strategy.Falcon -> FalconScreenshotStrategy(activity).takeScreenshot(screenshotName) { screenshot, bitmap ->
                 screenshotCallback.screenshotCaptured(screenshot, bitmap)
             }
-            ScreenshotSource.UIAutomator -> UiAutomatorScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
+            Strategy.UIAutomator -> UiAutomatorScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
                 screenshotCallback.screenshotCaptured(screenshot, bitmap)
             }
-            ScreenshotSource.Default -> DecorViewScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
+            Strategy.Default -> DecorViewScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
                 screenshotCallback.screenshotCaptured(screenshot, bitmap)
             }
         }
