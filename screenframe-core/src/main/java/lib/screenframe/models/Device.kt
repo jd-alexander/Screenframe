@@ -6,5 +6,5 @@ data class Device(val name:Name,
                   val screenSize:Bounds,
                   val physicalSize:Float,
                   val orientation: Orientation,
-                  val frameUrl:String
+                  val id:String
                   )
