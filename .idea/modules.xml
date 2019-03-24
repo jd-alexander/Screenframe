@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Scoop.iml" filepath="$PROJECT_DIR$/Scoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Screenframe.iml" filepath="$PROJECT_DIR$/Screenframe.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scoop-core/scoop-core.iml" filepath="$PROJECT_DIR$/scoop-core/scoop-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screenframe-core/screenframe-core.iml" filepath="$PROJECT_DIR$/screenframe-core/screenframe-core.iml" />
     </modules>
   </component>
 </project>

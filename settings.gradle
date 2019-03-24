@@ -1,1 +1,2 @@
-include ':app', ':scoop-core'
+include ':screenframe-core', ':app'
+rootProject.name = 'Screenframe'
