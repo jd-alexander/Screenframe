@@ -1,7 +1,6 @@
 package lib.screenframe
 
 import android.app.Activity
-import android.graphics.Bitmap
 import lib.screenframe.models.Strategy
 import tools.fastlane.screengrab.*
 
@@ -17,7 +16,7 @@ class ScreenframeStrategy(private val strategy: Strategy = Strategy.Default, pri
             Strategy.Falcon -> FalconScreenshotStrategy(activity).takeScreenshot(screenshotName) { screenshot, bitmap ->
                 screenshotCallback.screenshotCaptured(screenshot, bitmap)
             }
-            Strategy.UIAutomator -> UiAutomatorScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
+            Strategy.UiAutomator -> UiAutomatorScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
                 screenshotCallback.screenshotCaptured(screenshot, bitmap)
             }
             Strategy.Default -> DecorViewScreenshotStrategy().takeScreenshot(screenshotName) { screenshot, bitmap ->
