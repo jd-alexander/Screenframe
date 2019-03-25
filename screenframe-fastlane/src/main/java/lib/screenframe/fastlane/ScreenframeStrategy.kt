@@ -1,7 +1,7 @@
-package lib.screenframe
+package lib.screenframe.fastlane
 
 import android.app.Activity
-import lib.screenframe.models.Strategy
+import lib.screenframe.fastlane.models.Strategy
 import tools.fastlane.screengrab.*
 
 class ScreenframeStrategy(private val strategy: Strategy = Strategy.Default, private val activity: Activity) : ScreenshotStrategy {

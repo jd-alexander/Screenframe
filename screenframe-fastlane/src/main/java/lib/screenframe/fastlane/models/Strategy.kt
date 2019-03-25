@@ -1,4 +1,4 @@
-package lib.screenframe.models
+package lib.screenframe.fastlane.models
 
 enum class Strategy {
     Falcon,

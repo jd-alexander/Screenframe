@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Screenframe.iml" filepath="$PROJECT_DIR$/Screenframe.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/screenframe-core/screenframe-core.iml" filepath="$PROJECT_DIR$/screenframe-core/screenframe-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screenframe-fastlane/screenframe-fastlane.iml" filepath="$PROJECT_DIR$/screenframe-fastlane/screenframe-fastlane.iml" />
     </modules>
   </component>
 </project>

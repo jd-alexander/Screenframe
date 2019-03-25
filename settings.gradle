@@ -1,2 +1,2 @@
-include ':screenframe-core', ':app'
+include ':screenframe-core', ':app', ':screenframe-fastlane'
 rootProject.name = 'Screenframe'
