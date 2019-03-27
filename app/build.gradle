@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply from: '../gradle_scripts/code_quality.gradle'
+
 android {
-    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+    compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        minSdkVersion rootProject.ext.androidMinSdkVersion
-        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
         applicationId "app.screenframe"
         versionCode 1
         versionName "1.0"
@@ -25,13 +27,16 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation androidSupport.support
+    implementation androidSupport.design
+    implementation androidSupport.constraintLayout
 
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
-    testImplementation "junit:junit:$rootProject.ext.jUnitVersion"
-    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.testRunnerVersion"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
-    implementation('tools.fastlane:screengrab:1.2.0')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.ext.kotlinVersion"
+    implementation other.kotlinStdlib
+    implementation other.screengrab
+
+    testImplementation other.kotlinReflect
+    testImplementation testing.junit
+    testImplementation testing.kotlinJunit
+    testImplementation testing.mockitoKotlin
+    testImplementation testing.kluent
 }
