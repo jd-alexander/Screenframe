@@ -35,7 +35,7 @@ ext.versions = [
 ext.gradlePlugins = [
         androidTools  : "com.android.tools.build:gradle:$versions.androidTools",
         kotlin        : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
-        ktlintGradle  : "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:+",
+        ktlintGradle  : "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:$versions.ktlintGradle",
         detekt        : "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$versions.detekt",
 ]
 
