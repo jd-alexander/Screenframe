@@ -5,6 +5,5 @@ data class Device(val name:Name,
                   val portOffset:Bounds,
                   val screenSize:Bounds,
                   val physicalSize:Float,
-                  val orientation: Orientation,
                   val id:String
                   )

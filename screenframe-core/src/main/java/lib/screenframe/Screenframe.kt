@@ -5,12 +5,8 @@ import lib.screenframe.models.Orientation
 import lib.screenframe.utils.Util.getBitmap
 import java.io.File
 
-class FrameGenerator {
-    private val device: Device
-
-    constructor(device: Device) {
-        this.device = device
-    }
+object Screenframe {
+    private val device = DeviceFactory.defaultDevice()
 
     public fun generateFrame(screenshot: File): File? {
 
@@ -21,4 +17,6 @@ class FrameGenerator {
         return File("")
     }
 }
+
+
 
