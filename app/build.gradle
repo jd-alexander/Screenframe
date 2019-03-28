@@ -30,10 +30,8 @@ dependencies {
     implementation androidSupport.support
     implementation androidSupport.design
     implementation androidSupport.constraintLayout
-
     implementation other.kotlinStdlib
     implementation other.screengrab
-
     testImplementation other.kotlinReflect
     testImplementation testing.junit
     testImplementation testing.kotlinJunit

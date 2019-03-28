@@ -4,6 +4,9 @@ import android.app.Activity
 import lib.screenframe.fastlane.models.Strategy
 import tools.fastlane.screengrab.*
 
+/**
+ * Wraps the different Screenshot Strategies that are used within Screengrab for screenshot generation.
+ */
 class ScreenframeStrategy(private val strategy: Strategy = Strategy.Default, private val activity: Activity) : ScreenshotStrategy {
     override fun takeScreenshot(screenshotName: String?, screenshotCallback: ScreenshotCallback?) {
 

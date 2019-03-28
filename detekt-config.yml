@@ -1,0 +1,101 @@
+
+autoCorrect: true
+failFast: false
+
+build:
+  weights:
+    complexity: 2
+    formatting: 1
+    LongParameterList: 1
+    comments: 1
+
+potential-bugs:
+  active: true
+  DuplicateCaseInWhenExpression:
+    active: true
+  EqualsWithHashCodeExist:
+    active: true
+  ExplicitGarbageCollectionCall:
+    active: true
+  LateinitUsage:
+    active: true
+  UnsafeCallOnNullableType:
+    active: true
+  UnsafeCast:
+    active: true
+
+performance:
+  active: true
+  ForEachOnRange:
+    active: true
+  SpreadOperator:
+    active: true
+
+exceptions:
+  active: true
+
+empty-blocks:
+  active: true
+
+complexity:
+  active: true
+  LongMethod:
+    threshold: 20
+  LongParameterList:
+    threshold: 5
+  LargeClass:
+    threshold: 150
+  ComplexMethod:
+    threshold: 10
+  TooManyFunctions:
+    threshold: 20
+  ComplexCondition:
+    threshold: 3
+  LabeledExpression:
+    active: false
+
+code-smell:
+  active: true
+  FeatureEnvy:
+    threshold: 0.5
+    weight: 0.45
+    base: 0.5
+
+formatting:
+  active: true
+
+style:
+  active: true
+  TrailingWhitespace:
+    active : true
+  NewLineAtEndOfFile:
+    active: false
+  ForbiddenComment:
+    active: true
+    values: 'TODO:,FIXME:,STOPSHIP:'
+  WildcardImport:
+    active: false
+  MaxLineLength:
+    active: false
+  NamingConventionViolation:
+    active: true
+    variablePattern: '^(_)?[a-z$][a-zA-Z$0-9]*$'
+    constantPattern: '^([A-Z_]*|serialVersionUID)$'
+    methodPattern: '^[a-z\s`$][a-zA-Z\s$0-9`]*$'
+    classPattern: '[A-Z$][a-zA-Z$]*'
+    enumEntryPattern: '^[A-Z$][a-zA-Z_$0-9]*$'
+
+comments:
+  active: true
+  CommentOverPrivateMethod:
+    active: true
+  CommentOverPrivateProperty:
+    active: true
+  UndocumentedPublicClass:
+    active: false
+    searchInNestedClass: true
+    searchInInnerClass: true
+    searchInInnerInterface: true
+  UndocumentedPublicFunction:
+    active: false
+
