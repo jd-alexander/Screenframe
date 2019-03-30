@@ -6,7 +6,7 @@ kotlinter {
     ignoreFailures = false
     indentSize = 4
     continuationIndentSize = 4
-    reporter = "html"
+    reporter = 'html'
     experimentalRules = false
 }
 

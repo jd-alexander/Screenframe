@@ -4,7 +4,6 @@ import lib.screenframe.domain.DeviceFactoryContract
 import lib.screenframe.models.Bounds
 import lib.screenframe.models.Device
 import lib.screenframe.models.Name
-import lib.screenframe.models.Name.*
 
 class DeviceFactory : DeviceFactoryContract {
     private val devices = mutableListOf<Device>()
@@ -14,7 +13,7 @@ class DeviceFactory : DeviceFactoryContract {
     }
 
     override fun createDevices() {
-        val nexus5 = Device(name = Nexus5,
+        val nexus5 = Device(name = Name.Nexus5,
                 landOffset = Bounds(436, 306),
                 portOffset = Bounds(306, 436),
                 screenSize = Bounds(1080, 1920),
