@@ -19,7 +19,7 @@ enum class Orientation(id: String) {
          */
         fun calculate(screenshot: Bitmap, device: Device): Orientation? {
             val screenshotBounds = Bounds(screenshot.width, screenshot.height)
-            return calculate(screenshotBounds, device.portOffset);
+            return calculate(screenshotBounds, device.portOffset)
         }
 
         /**

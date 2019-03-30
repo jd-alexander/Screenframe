@@ -10,7 +10,7 @@ import tools.fastlane.screengrab.*
 class ScreenframeStrategy(private val strategy: Strategy = Strategy.Default, private val activity: Activity) : ScreenshotStrategy {
     override fun takeScreenshot(screenshotName: String?, screenshotCallback: ScreenshotCallback?) {
 
-        takeStrategyScreenshot(screenshotName,strategy, ScreenshotCallback { screenshot, bitmap ->
+        takeStrategyScreenshot(screenshotName, strategy, ScreenshotCallback { screenshot, bitmap ->
         })
     }
 

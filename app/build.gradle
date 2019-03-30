@@ -27,6 +27,7 @@ android {
 }
 
 dependencies {
+    implementation project(':screenframe-core')
     implementation androidSupport.support
     implementation androidSupport.design
     implementation androidSupport.constraintLayout

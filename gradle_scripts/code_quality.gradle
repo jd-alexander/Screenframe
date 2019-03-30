@@ -1,11 +1,15 @@
 
 // KtLint
-apply plugin: "org.jlleitschuh.gradle.ktlint-idea"
+apply plugin: "org.jmailen.kotlinter"
 
-ktlint {
-    outputToConsole = true
-    android = true
+kotlinter {
+    ignoreFailures = false
+    indentSize = 4
+    continuationIndentSize = 4
+    reporter = "html"
+    experimentalRules = false
 }
+
 // Detekt
 if (!project.rootProject.plugins.hasPlugin("io.gitlab.arturbosch.detekt")) {
     Project rootProject = project.rootProject

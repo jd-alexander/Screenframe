@@ -1,22 +1,21 @@
 package lib.screenframe
 
-import lib.screenframe.models.Device
+import android.graphics.Bitmap
+import lib.screenframe.core.DeviceFactory
+import lib.screenframe.models.Config
 import lib.screenframe.models.Orientation
-import lib.screenframe.utils.Util.getBitmap
 import java.io.File
+import java.lang.Exception
 
 object Screenframe {
-    private val device = DeviceFactory.defaultDevice()
+    private val deviceFactory = DeviceFactory()
+    private val device = deviceFactory.getDefaultDevice()
 
-    public fun generateFrame(screenshot: File): File? {
+    public fun generate(screenshot: Bitmap, config: Config): File? {
 
-        val image = getBitmap(screenshot)
-
-        val orientation = Orientation.calculate(image,device)
+        val orientation = Orientation.calculate(screenshot, device)
+                ?: throw Exception("Could not match the orientation of the device")
 
         return File("")
     }
 }
-
-
-
