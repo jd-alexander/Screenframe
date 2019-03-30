@@ -2,7 +2,11 @@ package lib.screenframe.fastlane
 
 import android.app.Activity
 import lib.screenframe.fastlane.models.Strategy
-import tools.fastlane.screengrab.*
+import tools.fastlane.screengrab.DecorViewScreenshotStrategy
+import tools.fastlane.screengrab.FalconScreenshotStrategy
+import tools.fastlane.screengrab.ScreenshotCallback
+import tools.fastlane.screengrab.ScreenshotStrategy
+import tools.fastlane.screengrab.UiAutomatorScreenshotStrategy
 
 /**
  * Wraps the different Screenshot Strategies that are used within Screengrab for screenshot generation.
