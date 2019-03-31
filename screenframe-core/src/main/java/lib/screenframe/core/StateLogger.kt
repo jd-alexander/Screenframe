@@ -4,9 +4,18 @@ import lib.screenframe.models.Config
 
 abstract class StateLogger {
     protected fun log(config: Config) {
+        val message = "Generating screenshot with " + config.background?.description() + ","
 
-        val message = "Generating screenshot with " + config.background?.description() + config.glareEnabled
-}
+        if (config.glareEnabled) {
+            message.plus("with glare,")
+        }
 
-abstract fun log(message: String)
+        if (config.shadowEnabled) {
+            message.plus("with a shadow.")
+        }
+
+        log(message)
+    }
+
+    abstract fun log(message: String)
 }
