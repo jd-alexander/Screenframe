@@ -5,14 +5,12 @@ import lib.screenframe.core.DeviceFactory
 import lib.screenframe.models.Bounds
 import lib.screenframe.models.Config
 import lib.screenframe.models.Orientation
-import java.io.File
-import java.lang.Exception
 
 object Screenframe {
     private val deviceFactory = DeviceFactory()
     private val device = deviceFactory.getDefaultDevice()
 
-    fun generate(screenshot: Bitmap, config: Config): File? {
+    fun generate(screenshot: Bitmap, config: Config): Bitmap {
         val resizedScreenshot: Bitmap
         var offset: Bounds
 
@@ -35,6 +33,6 @@ object Screenframe {
             }
         }
 
-        return File("")
+        return resizedScreenshot
     }
 }
