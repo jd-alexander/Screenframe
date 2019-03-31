@@ -12,7 +12,7 @@ object Screenframe {
 
     fun generate(screenshot: Bitmap, config: Config): Bitmap {
         val resizedScreenshot: Bitmap
-        var offset: Bounds
+        val offset: Bounds
 
         config.name?.let {
             deviceFactory.getDevice(config.name)
