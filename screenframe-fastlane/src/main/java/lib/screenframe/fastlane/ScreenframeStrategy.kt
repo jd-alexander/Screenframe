@@ -17,7 +17,7 @@ class ScreenframeStrategy(private val config: Config, private val activity: Acti
     override fun takeScreenshot(screenshotName: String?, screenshotCallback: ScreenshotCallback?) {
 
         takeStrategyScreenshot(screenshotName, strategy, ScreenshotCallback { screenshot, bitmap ->
-            val framedScreenshot = Screenframe.generate(bitmap, config)
+            val framedScreenshot = Screenframe.generate(bitmap, config,activity)
             screenshotCallback?.screenshotCaptured(screenshot, framedScreenshot)
         })
     }

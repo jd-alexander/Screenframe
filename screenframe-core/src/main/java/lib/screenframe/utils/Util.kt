@@ -12,7 +12,7 @@ object Util {
         return BitmapFactory.decodeFile(file.path, options)
     }
 
-    fun decodeDeviceResource(context: Context, resourceName: String): Bitmap? {
+    fun getDeviceDrawable(context: Context, resourceName: String): Bitmap? {
         val options = BitmapFactory.Options()
         options.inMutable = true
 
