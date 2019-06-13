@@ -4,7 +4,7 @@ ext.versions = [
         compileSdk           : 28,
         gradle               : '4.5.1',
 
-        androidTools         : "3.3.2",
+        androidTools         : '3.4.1',
         ktlintGradle         : "1.22.0",
         detekt               : "1.0.0-RC14",
         jacoco               : "0.7.9",
@@ -21,6 +21,8 @@ ext.versions = [
         semver               : "1.0.0",
         picasso              : "2.71828",
         screengrab           : "1.2.0",
+        multidex             : "2.0.0",
+        dagger               : "2.19",
 
         junit                : "4.12",
         mockito              : "2.16.0",
@@ -56,7 +58,12 @@ ext.other = [
         okhttpLogging      : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
         semver             : "net.swiftzer.semver:semver:$versions.semver",
         picasso            : "com.squareup.picasso:picasso:$versions.picasso",
-        screengrab         : "tools.fastlane:screengrab:$versions.screengrab"
+        screengrab         : "tools.fastlane:screengrab:$versions.screengrab",
+        multidex           : "androidx.multidex:multidex:$versions.multidex",
+        dagger             : "com.google.dagger:dagger:$versions.dagger",
+        daggerCompiler     : "com.google.dagger:dagger-compiler:$versions.dagger",
+        daggerProcessor    : "com.google.dagger:dagger-android-processor:$versions.dagger",
+        daggerAndroid      : "com.google.dagger:dagger-android-support:$versions.dagger"
 ]
 
 ext.testing = [

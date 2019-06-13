@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 apply from: '../gradle_scripts/code_quality.gradle'
 
@@ -33,6 +34,11 @@ dependencies {
     implementation androidSupport.constraintLayout
     implementation other.kotlinStdlib
     implementation other.screengrab
+    implementation other.dagger
+    kapt other.daggerCompiler
+    kapt other.daggerProcessor
+    implementation other.daggerAndroid
+    implementation other.multidex
     testImplementation other.kotlinReflect
     testImplementation testing.junit
     testImplementation testing.kotlinJunit

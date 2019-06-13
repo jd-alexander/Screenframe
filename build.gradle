@@ -30,7 +30,3 @@ allprojects {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion(versions.gradle)
-    distributionType("all")
-}
